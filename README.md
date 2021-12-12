@@ -24,3 +24,5 @@ If it's already installed, make sure that docker services running. Then Please f
 (*Next TODO):
 - Finish unit test
 - Install and implement API Documentation tools (Swagger)
+- Error Handler
+- Authentication with jsonwebtoken
