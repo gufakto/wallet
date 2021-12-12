@@ -1,10 +1,10 @@
-NODE DOCKER
+NODE DOCKER (Optional)
 =============
 build image : docker build . -t node-server
 run container : docker run -p 5000:5000 -d --name node-server-app node-server
 login into container CLI : docker exec -it node-server-app bash
 
-POSTGRES DOCKER
+POSTGRES DOCKER (Optional)
 ============
 run postgress docker: docker run --name postgres-docker -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 postgres
 
@@ -24,12 +24,12 @@ If it's already installed, make sure that docker services running. Then Please f
 
 End Point
 ================
-- /user => register users with POST
-- /topup => topup with POST
-- /balance => Read Balance with GET
-- /transfer => Transfer amount with POST
-- /top_transactions_per_user => Get the biggest amount with GET
-- /top_users => get the biggest transaction from users with GET
+- /user => register users with POST body: [username]
+- /topup => topup with POST headers: [Authorization: token] body: [amount]
+- /balance => Read Balance with GET headers[Authorization: token]
+- /transfer => Transfer amount with POST headers[Authorization: token] body[to_username, amount]
+- /top_transactions_per_user => Get the biggest amount with GET headers[Authorization: token]
+- /top_users => get the biggest transaction from users with GET headers[Authorization: token]
 
 (*Nb):
 - test_server_1 is the name of node js container exp: if we run in the terminal docker ps it will show the running containers 
