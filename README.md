@@ -32,7 +32,7 @@ End Point
 - /top_users => get the biggest transaction from users with GET headers[Authorization: token]
 
 (*Nb):
-- test_server_1 is the name of node js container exp: if we run in the terminal docker ps it will show the running containers 
+- test_server_1 is the name of node js container exp: if we run in the terminal docker ps it will show the running container's name
 
 (*Next TODO):
 - Finish unit test
