@@ -13,13 +13,26 @@ docker-compose
 ================
 To simplify run this apps. Please make sure your local/server already installed docker and docker-compose.
 If it's already installed, make sure that docker services running. Then Please follow bellow instruction:
-1. Build images and run application: docker-compose up --build -d
-2. To check all container run please execute this command in the terminal: docker ps 
-3. run this command to migrate all table into database: docker exec test_server_1 npm run migrate
-4. run the seed command to fill dummy data into database : docker exec test_server_1 npm run seed
-5. To login into container database please execute this command :  docker exec -it test_db_1 psql -p 5432 -d postgres -U postgres
-6. To loign into container node server please execute this command: docker exec -it test_server_1 bash
-7. If these step already done please visit http://localhost:5000
+1. Enter into the pproject folder from your terminal using cd command 
+2. Build and run application images containers with: docker-compose up --build -d
+3. To check all running container, please execute this command in the terminal: docker ps 
+4. Run this command to migrate all table into database: docker exec test_server_1 npm run migrate
+5. Run the seed command to fill dummy data into database : docker exec test_server_1 npm run seed (Optional) 
+6. To login into container database please execute this command :  docker exec -it test_db_1 psql -p 5432 -d postgres -U postgres (Optional) 
+7. To loign into container node server please execute this command: docker exec -it test_server_1 bash (Optional) 
+8. If these step already done please visit http://localhost:5000
+
+End Point
+================
+/user => register users with POST
+/topup => topup with POST
+/balance => Read Balance with GET
+/transfer => Transfer amount with POST
+/top_transactions_per_user => Get the biggest amount with GET
+/top_users => get the biggest transaction from users with GET
+
+(*Nb):
+- test_server_1 is the name of node js container exp: if we run in the terminal docker ps it will show the running containers 
 
 (*Next TODO):
 - Finish unit test
