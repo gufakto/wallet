@@ -24,12 +24,12 @@ If it's already installed, make sure that docker services running. Then Please f
 
 End Point
 ================
-/user => register users with POST
-/topup => topup with POST
-/balance => Read Balance with GET
-/transfer => Transfer amount with POST
-/top_transactions_per_user => Get the biggest amount with GET
-/top_users => get the biggest transaction from users with GET
+- /user => register users with POST
+- /topup => topup with POST
+- /balance => Read Balance with GET
+- /transfer => Transfer amount with POST
+- /top_transactions_per_user => Get the biggest amount with GET
+- /top_users => get the biggest transaction from users with GET
 
 (*Nb):
 - test_server_1 is the name of node js container exp: if we run in the terminal docker ps it will show the running containers 
